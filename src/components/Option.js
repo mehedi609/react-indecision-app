@@ -2,13 +2,15 @@ import React from "react";
 
 const Option = props => {
   return (
-    <div>
-      <span style={{ marginTop: "15px" }}>{props.optionText}</span>
+    <div className="option">
+      <p className="option__text">
+        {props.count}. {props.optionText}
+      </p>
       <button
         onClick={event => {
           props.handleDeleteOption(props.optionText);
         }}
-        style={{ marginLeft: "10px" }}
+        className="button button--link"
       >
         Remove
       </button>
